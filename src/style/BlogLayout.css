@@ -1,0 +1,23 @@
+.BlogLayout {
+    min-height: 100vh;
+}
+
+.BlogBody {
+    padding: 0 50px;
+    margin-top: 64px;
+}
+
+.Breadcrumb {
+    margin: 16px 0;
+}
+
+.BlogContent {
+    padding: 24px;
+    min-height: 380px;
+}
+
+.innerContent {
+    min-height: 100vh;
+    padding: 0 50px;
+    margin-top: 128px;
+}
