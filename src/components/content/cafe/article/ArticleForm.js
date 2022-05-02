@@ -1,17 +1,12 @@
 import React from 'react';
-import TextArea from "antd/es/input/TextArea";
+import MDEditor from '@uiw/react-md-editor';
+import CafeLayout from "../../../../containers/CafeLayout";
 
 export default function ArticleForm() {
-  const onChange = () => {
-    console.log("changed!")
-  }
+  const [value, setValue] = React.useState("**Hello world!!!**");
   return (
-    <TextArea
-      bordered={false}
-      maxLength={100}
-      style={{height: 120}}
-      showCount
-      onChange={onChange}
-    />
+    <CafeLayout>
+      <MDEditor.Markdown source="# Hello Markdown!"/>
+    </CafeLayout>
   )
 }

@@ -3,6 +3,7 @@ import 'antd/dist/antd.css';
 import {Menu} from "antd";
 import {Header} from "antd/es/layout/layout";
 import {Link} from "react-router-dom";
+import {getToken} from "../../modules/Authenticate";
 
 function BlogHeader() {
   const items = [
@@ -34,6 +35,11 @@ function BlogHeader() {
         <Menu.Item key="/cafe">
           <Link to="/cafe">Cafe</Link>
         </Menu.Item>
+        {getToken() ? "" :
+          <Menu.Item key="/sign-in">
+            <Link to="/sign-in">Login</Link>
+          </Menu.Item>
+        }
       </Menu>
     </Header>
   );

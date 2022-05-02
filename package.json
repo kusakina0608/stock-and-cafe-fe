@@ -7,6 +7,7 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
     "@testing-library/user-event": "^13.5.0",
+    "@uiw/react-md-editor": "^3.12.1",
     "antd": "^4.20.0",
     "axios": "^0.27.2",
     "md5": "^2.3.0",
@@ -24,7 +25,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "aws s3 sync ./build s3://stock-and-cafe-deploy --profile=sac-aws-manager"
   },
   "eslintConfig": {
     "extends": [

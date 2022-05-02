@@ -4,6 +4,7 @@ import webClient from "../../../../modules/WebClient";
 import querystring from "query-string";
 import {Avatar, List} from "antd";
 import getGravatar from "../../../../modules/Gravatar";
+import host from "../../../../constants/Host";
 
 export default function ReplyList() {
   const {articleId} = useParams();
@@ -23,7 +24,7 @@ export default function ReplyList() {
   }
 
   function getReplies(searchParams) {
-    webClient.get(`/api/v1/articles/${articleId}/replies?${querystring.stringify(searchParams)}`)
+    webClient.get(`${host}/api/v1/articles/${articleId}/replies?${querystring.stringify(searchParams)}`)
       .then((res) => res.data)
       .then((data) => {
         console.log("data: ", data)

@@ -1,8 +1,9 @@
 import webClient from "./WebClient";
 import {message} from "antd";
+import host from "../constants/Host";
 
 export default function authenticate(loginInfo) {
-  webClient.post(`/api/v1/authenticate`, loginInfo)
+  webClient.post(`${host}/api/v1/authenticate`, loginInfo)
     .then((res) => res.data)
     .then((data) => {
       if (data.token) {

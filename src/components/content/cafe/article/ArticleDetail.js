@@ -1,4 +1,5 @@
 import "../../../../style/ArticleList.css"
+import "../../../../style/CustomMD.css"
 
 import React, {useEffect, useState} from 'react';
 import CafeLayout from "../../../../containers/CafeLayout";
@@ -8,6 +9,8 @@ import {Button, PageHeader, Row, Tag, Typography} from "antd";
 import getGravatar from "../../../../modules/Gravatar";
 import moment from "moment";
 import ReplyList from "../reply/ReplyList";
+import host from "../../../../constants/Host";
+import MDEditor from "@uiw/react-md-editor";
 
 export default function ArticleDetail() {
   const {articleId} = useParams();
@@ -19,7 +22,7 @@ export default function ArticleDetail() {
   }, [])
 
   function getArticle(articleId) {
-    webClient.get(`/api/v1/articles/${articleId}`)
+    webClient.get(`${host}/api/v1/articles/${articleId}`)
       .then((res) => res.data)
       .then((data) => {
         console.log("data: ", data)
@@ -38,21 +41,25 @@ export default function ArticleDetail() {
 
   return (
     <CafeLayout>
-      <PageHeader
-        title={article.title}
-        className="site-page-header"
-        subTitle={moment(article.createdDate).format("YYYY/MM/DD HH:mm:ss")}
-        tags={<Tag color="blue">카페</Tag>}
-        extra={[
-          <Button key="1">글목록</Button>,
-          <Button key="2">수정하기</Button>,
-          <Button key="3">삭제하기</Button>
-        ]}
-        avatar={{src: getGravatar()}}
-      >
-        <Content>
-        </Content>
-      </PageHeader>
+
+      <div data-color-mode="light">
+        <PageHeader
+          title={article.title}
+          className="site-page-header"
+          subTitle={moment(article.createdDate).format("YYYY/MM/DD HH:mm:ss")}
+          tags={<Tag color="blue">카페</Tag>}
+          extra={[
+            <Button key="1">글목록</Button>,
+            <Button key="2">수정하기</Button>,
+            <Button key="3">삭제하기</Button>
+          ]}
+          avatar={{src: getGravatar()}}
+        >
+          <MDEditor.Markdown
+            className="MDTransparent"
+            source={article.content}/>
+        </PageHeader>
+      </div>
       <ReplyList/>
     </CafeLayout>
   )

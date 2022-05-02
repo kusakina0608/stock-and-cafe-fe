@@ -5,9 +5,9 @@ import {Avatar, List} from 'antd';
 import CafeLayout from "../../../../containers/CafeLayout";
 import webClient from "../../../../modules/WebClient";
 import querystring from "query-string";
-import cafe_default from "../../../../style/cafe_default.jpeg";
 import moment from "moment";
 import getGravatar from "../../../../modules/Gravatar";
+import host from "../../../../constants/Host";
 
 
 export default function ArticleList() {
@@ -35,7 +35,8 @@ export default function ArticleList() {
   const articleRenderer = item => (
     <List.Item
       key={item.articleId}
-      extra={<img className="ArticleThumbnail" alt="Article Thumbnail" src={cafe_default}/>}
+      extra={<img className="ArticleThumbnail" alt="Article Thumbnail"
+                  src="https://stock-and-cafe.s3.us-west-1.amazonaws.com/resources/images/cafe_default.jpeg"/>}
     >
       <List.Item.Meta
         avatar={<Avatar src={`${getGravatar(item.writerEmail)}`}/>}
@@ -47,7 +48,7 @@ export default function ArticleList() {
   )
 
   function getArticles(searchParams) {
-    webClient.get(`/api/v1/articles?${querystring.stringify(searchParams)}`)
+    webClient.get(`${host}/api/v1/articles?${querystring.stringify(searchParams)}`)
       .then((res) => res.data)
       .then((data) => {
         setPaginationProps({

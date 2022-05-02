@@ -5,44 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="49967e40-a692-4189-89a9-2394879ba69f" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/stock-and-cafe-fe.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/logo192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/logo512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/BlogFooter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/BlogHeader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/content/Home.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/content/SignIn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/content/SignUp.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/content/cafe/article/ArticleDetail.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/content/cafe/article/ArticleForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/content/cafe/article/ArticleList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/content/cafe/reply/ReplyList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/constants/Host.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/BlogLayout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/CafeLayout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/ErrorBoundary.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/StockLayout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/Authenticate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/Gravatar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/WebClient.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/style/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/style/ArticleList.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/style/BlogLayout.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/style/cafe_default.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/style/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/style/CustomMD.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/BlogHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/BlogHeader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/content/cafe/article/ArticleDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/cafe/article/ArticleDetail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/content/cafe/article/ArticleForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/cafe/article/ArticleForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/content/cafe/article/ArticleList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/cafe/article/ArticleList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/content/cafe/reply/ReplyList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/cafe/reply/ReplyList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/Authenticate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Authenticate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style/cafe_default.jpeg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,8 +26,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -96,11 +70,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/src/containers" />
       <recent name="$PROJECT_DIR$/src/style" />
       <recent name="$PROJECT_DIR$/src/components/content" />
       <recent name="$PROJECT_DIR$/src/components/content/stock" />
-      <recent name="$PROJECT_DIR$/src/components/content/cafe" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
