@@ -5,16 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="49967e40-a692-4189-89a9-2394879ba69f" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/content/cafe/article/ArticleEdit.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/content/cafe/article/ArticleDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/cafe/article/ArticleDetail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/content/cafe/article/ArticleForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/cafe/article/ArticleForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/content/cafe/article/ArticleList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/cafe/article/ArticleList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/BlogLayout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/BlogLayout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/Authenticate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Authenticate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/WebClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/WebClient.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
