@@ -9,8 +9,8 @@ import {Button, PageHeader, Row, Tag, Typography} from "antd";
 import getGravatar from "../../../../modules/Gravatar";
 import moment from "moment";
 import ReplyList from "../reply/ReplyList";
-import host from "../../../../constants/Host";
 import MDEditor from "@uiw/react-md-editor";
+import host from "../../../../constants/Host";
 
 export default function ArticleDetail() {
   const {articleId} = useParams();
@@ -41,7 +41,6 @@ export default function ArticleDetail() {
 
   return (
     <CafeLayout>
-
       <div data-color-mode="light">
         <PageHeader
           title={article.title}

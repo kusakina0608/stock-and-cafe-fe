@@ -5,18 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="49967e40-a692-4189-89a9-2394879ba69f" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/style/CustomMD.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/BlogHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/BlogHeader.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/content/cafe/article/ArticleDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/cafe/article/ArticleDetail.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/content/cafe/article/ArticleForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/cafe/article/ArticleForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/content/cafe/article/ArticleList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/cafe/article/ArticleList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/content/cafe/reply/ReplyList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/cafe/reply/ReplyList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/Authenticate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Authenticate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style/cafe_default.jpeg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
