@@ -42,6 +42,11 @@ class WebClient {
       .catch(handleError)
   }
 
+  patch() {
+    return axios.patch(...arguments)
+      .catch(handleError)
+  }
+
   delete() {
     return axios.delete(...arguments)
       .catch(handleError)

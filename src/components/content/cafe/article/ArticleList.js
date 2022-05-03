@@ -1,7 +1,7 @@
 import "../../../../style/ArticleList.css"
 
 import React, {useEffect, useState} from 'react';
-import {Avatar, List} from 'antd';
+import {Avatar, Button, List} from 'antd';
 import CafeLayout from "../../../../containers/CafeLayout";
 import webClient from "../../../../modules/WebClient";
 import querystring from "query-string";
@@ -71,6 +71,7 @@ export default function ArticleList() {
 
   return (
     <CafeLayout>
+      <Button key="2" href="/cafe/new">글쓰기</Button>
       <List
         itemLayout="vertical"
         size="large"

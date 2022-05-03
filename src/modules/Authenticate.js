@@ -1,6 +1,7 @@
 import webClient from "./WebClient";
 import {message} from "antd";
 import host from "../constants/Host";
+import axios from "axios";
 
 export default function authenticate(loginInfo) {
   webClient.post(`${host}/api/v1/authenticate`, loginInfo)
@@ -10,6 +11,7 @@ export default function authenticate(loginInfo) {
         localStorage.setItem('token', data.token)
         message.success("로그인 성공")
       }
+      axios.defaults.headers.common['Authorization'] = data.token
       document.location.href = "/cafe"
     })
     .catch((err) => {

@@ -13,6 +13,7 @@ import ArticleList from "../components/content/cafe/article/ArticleList";
 import ArticleForm from "../components/content/cafe/article/ArticleForm";
 import SignIn from "../components/content/SignIn";
 import ArticleDetail from "../components/content/cafe/article/ArticleDetail";
+import ArticleEdit from "../components/content/cafe/article/ArticleEdit";
 
 function BlogLayout() {
   const items = [
@@ -31,6 +32,7 @@ function BlogLayout() {
         <Route path="/stock" element={<StockLayout/>}/>
         <Route path="/cafe" element={<ArticleList/>}/>
         <Route path="/cafe/:articleId" element={<ArticleDetail/>}/>
+        <Route path="/cafe/:articleId/edit" element={<ArticleEdit/>}/>
         <Route path="/cafe/new" element={<ArticleForm/>}/>
       </Routes>
       <BlogFooter/>
