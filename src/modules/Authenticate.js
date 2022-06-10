@@ -19,6 +19,23 @@ export default function authenticate(loginInfo) {
     })
 };
 
+export function register(registerInfo) {
+  webClient.post(`${host}/api/v1/members`, registerInfo)
+    .then((res) => res.data)
+    .then((data) => {
+      console.log(data)
+      message.success("회원가입 성공")
+      document.location.href = "/sign-in"
+    })
+    .catch(() => {
+      message.error("로그인에 실패하였습니다. 아이디와 비밀번호를 확인해 주세요.")
+    })
+};
+
+export function hasToken() {
+  return localStorage.getItem('token') !== null
+}
+
 export function getToken() {
   return localStorage.getItem('token')
 }

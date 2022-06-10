@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import CafeLayout from "../../../../containers/CafeLayout";
-import {Button, Col, Input, PageHeader, Row, Tag} from "antd";
+import {Button, Col, Input, message, PageHeader, Row, Tag} from "antd";
 import moment from "moment";
 import getGravatar from "../../../../modules/Gravatar";
 import ReactMarkdown from "react-markdown";
@@ -11,6 +11,7 @@ import TextArea from "antd/es/input/TextArea";
 import webClient from "../../../../modules/WebClient";
 import host from "../../../../constants/Host";
 import axios from "axios";
+import {getToken, hasToken} from "../../../../modules/Authenticate";
 
 export default function ArticleForm() {
   const [title, setTitle] = useState("")
@@ -23,14 +24,22 @@ export default function ArticleForm() {
     setContent(e.target.value)
   }
 
-  function saveArticle() {
-    axios.defaults.headers.common['Authorization'] = `Bearer ${localStorage.getItem('token')}`
-    webClient.post(`${host}/api/v1/articles`, {title, content})
-      .then((res) => res.data)
-      .then((data) => {
-        console.log("data: ", data)
-        document.location.href = `/cafe/${data.articleId}`
-      })
+  const saveArticle = () => {
+    if (hasToken()) {
+      axios.defaults.headers.common['Authorization'] = `Bearer ${getToken()}`
+      webClient.post(`${host}/api/v1/articles`, {title, content})
+        .then((res) => res.data)
+        .then((data) => {
+          console.log("data: ", data)
+          document.location.href = `/cafe/${data.articleId}`
+        })
+        .catch(() => {
+          message.error({content: "서버 오류가 발생했습니다.", key: "server_error"})
+        })
+    } else {
+      message.error({content: "로그인 정보가 존재하지 않습니다.", key: "token_error"})
+      document.location.href = "/sign-in"
+    }
   }
 
   return (

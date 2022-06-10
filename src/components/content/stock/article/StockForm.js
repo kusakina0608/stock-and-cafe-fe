@@ -1,5 +1,4 @@
-import React, {useEffect, useState} from 'react';
-import CafeLayout from "../../../../containers/CafeLayout";
+import React, {useState} from 'react';
 import {Button, Col, Input, message, PageHeader, Row, Tag} from "antd";
 import moment from "moment";
 import getGravatar from "../../../../modules/Gravatar";
@@ -11,30 +10,12 @@ import TextArea from "antd/es/input/TextArea";
 import webClient from "../../../../modules/WebClient";
 import host from "../../../../constants/Host";
 import axios from "axios";
-import {useParams} from "react-router-dom";
+import StockLayout from "../../../../containers/StockLayout";
 import {getToken, hasToken} from "../../../../modules/Authenticate";
 
-export default function ArticleEdit() {
-  const {articleId} = useParams();
+export default function StockForm() {
   const [title, setTitle] = useState("")
   const [content, setContent] = useState("")
-  const [createdDate, setCreatedDate] = useState("")
-  const [writerEmail, setWriterEmail] = useState("")
-
-
-  function getArticle() {
-    webClient.get(`${host}/api/v1/articles/${articleId}`)
-      .then((res) => res.data)
-      .then((data) => {
-        console.log("data: ", data)
-        setTitle(data.title)
-        setContent(data.content)
-        setCreatedDate(data.createdDate)
-        setWriterEmail(data.writerEmail)
-      })
-  }
-
-  useEffect(getArticle, [])
 
   const onTitleChange = (e) => {
     setTitle(e.target.value)
@@ -43,14 +24,14 @@ export default function ArticleEdit() {
     setContent(e.target.value)
   }
 
-  const updateArticle = () => {
+  const saveArticle = () => {
     if (hasToken()) {
       axios.defaults.headers.common['Authorization'] = `Bearer ${getToken()}`
-      webClient.patch(`${host}/api/v1/articles/${articleId}`, {title, content})
+      webClient.post(`${host}/api/v1/stocks`, {title, content})
         .then((res) => res.data)
         .then((data) => {
           console.log("data: ", data)
-          document.location.href = `/cafe/${data.articleId}`
+          document.location.href = `/stock/${data.stockId}`
         })
         .catch(() => {
           message.error({content: "서버 오류가 발생했습니다.", key: "server_error"})
@@ -62,20 +43,20 @@ export default function ArticleEdit() {
   }
 
   return (
-    <CafeLayout>
+    <StockLayout>
       <div data-color-mode="light">
         <PageHeader
           title={<Input placeholder="제목을 입력해주세요" bordered={false} value={title} onChange={onTitleChange}/>}
           className="site-page-header"
-          subTitle={moment(createdDate).format("YYYY/MM/DD HH:mm:ss")}
+          subTitle={moment().format("YYYY/MM/DD HH:mm:ss")}
           tags={<Tag color="blue">카페</Tag>}
           extra={[
             <Button key="1" onClick={() => {
-              document.location.href = "/cafe"
+              document.location.href = "/stock"
             }}>글목록</Button>,
-            <Button key="2" onClick={updateArticle}>수정하기</Button>
+            <Button key="2" onClick={saveArticle}>등록하기</Button>
           ]}
-          avatar={{src: getGravatar(writerEmail)}}
+          avatar={{src: getGravatar()}}
         >
         </PageHeader>
         <Row>
@@ -91,6 +72,6 @@ export default function ArticleEdit() {
           </Col>
         </Row>
       </div>
-    </CafeLayout>
+    </StockLayout>
   )
 }

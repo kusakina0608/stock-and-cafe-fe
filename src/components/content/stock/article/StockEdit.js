@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import CafeLayout from "../../../../containers/CafeLayout";
 import {Button, Col, Input, message, PageHeader, Row, Tag} from "antd";
 import moment from "moment";
 import getGravatar from "../../../../modules/Gravatar";
@@ -12,26 +11,36 @@ import webClient from "../../../../modules/WebClient";
 import host from "../../../../constants/Host";
 import axios from "axios";
 import {useParams} from "react-router-dom";
+import StockLayout from "../../../../containers/StockLayout";
 import {getToken, hasToken} from "../../../../modules/Authenticate";
 
-export default function ArticleEdit() {
-  const {articleId} = useParams();
+export default function StockEdit() {
+  const {stockId} = useParams();
   const [title, setTitle] = useState("")
   const [content, setContent] = useState("")
   const [createdDate, setCreatedDate] = useState("")
   const [writerEmail, setWriterEmail] = useState("")
 
 
-  function getArticle() {
-    webClient.get(`${host}/api/v1/articles/${articleId}`)
-      .then((res) => res.data)
-      .then((data) => {
-        console.log("data: ", data)
-        setTitle(data.title)
-        setContent(data.content)
-        setCreatedDate(data.createdDate)
-        setWriterEmail(data.writerEmail)
-      })
+  const getArticle = () => {
+    if (hasToken()) {
+      axios.defaults.headers.common['Authorization'] = `Bearer ${getToken()}`
+      webClient.get(`${host}/api/v1/stocks/${stockId}`)
+        .then((res) => res.data)
+        .then((data) => {
+          console.log("data: ", data)
+          setTitle(data.title)
+          setContent(data.content)
+          setCreatedDate(data.createdDate)
+          setWriterEmail(data.writerEmail)
+        })
+        .catch(() => {
+          message.error({content: "서버 오류가 발생했습니다.", key: "server_error"})
+        })
+    } else {
+      message.error({content: "로그인 정보가 존재하지 않습니다.", key: "token_error"})
+      document.location.href = "/sign-in"
+    }
   }
 
   useEffect(getArticle, [])
@@ -46,11 +55,11 @@ export default function ArticleEdit() {
   const updateArticle = () => {
     if (hasToken()) {
       axios.defaults.headers.common['Authorization'] = `Bearer ${getToken()}`
-      webClient.patch(`${host}/api/v1/articles/${articleId}`, {title, content})
+      webClient.patch(`${host}/api/v1/stocks/${stockId}`, {title, content})
         .then((res) => res.data)
         .then((data) => {
           console.log("data: ", data)
-          document.location.href = `/cafe/${data.articleId}`
+          document.location.href = `/stock/${data.stockId}`
         })
         .catch(() => {
           message.error({content: "서버 오류가 발생했습니다.", key: "server_error"})
@@ -62,13 +71,13 @@ export default function ArticleEdit() {
   }
 
   return (
-    <CafeLayout>
+    <StockLayout>
       <div data-color-mode="light">
         <PageHeader
           title={<Input placeholder="제목을 입력해주세요" bordered={false} value={title} onChange={onTitleChange}/>}
           className="site-page-header"
           subTitle={moment(createdDate).format("YYYY/MM/DD HH:mm:ss")}
-          tags={<Tag color="blue">카페</Tag>}
+          tags={<Tag color="blue">주식</Tag>}
           extra={[
             <Button key="1" onClick={() => {
               document.location.href = "/cafe"
@@ -91,6 +100,6 @@ export default function ArticleEdit() {
           </Col>
         </Row>
       </div>
-    </CafeLayout>
+    </StockLayout>
   )
 }

@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="49967e40-a692-4189-89a9-2394879ba69f" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/content/stock/article/StockDetail.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/content/stock/article/StockEdit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/content/stock/article/StockForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/content/stock/article/StockList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/content/cafe/article/ArticleDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/cafe/article/ArticleDetail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/Host.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/Host.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/BlogLayout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/BlogLayout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/StockLayout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/StockLayout.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,24 +48,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;tasks&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/kina/Library/Application Support/JetBrains/Toolbox/apps/WebStorm/ch-0/221.5080.193/WebStorm.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/kina/Documents/GitHub/stock-and-cafe-fe/src/components/content/stock/article",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "tasks",
+    "ts.external.directory.path": "/Users/kina/Library/Application Support/JetBrains/Toolbox/apps/WebStorm/ch-0/221.5080.193/WebStorm.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/content/stock/article" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/src/containers" />
@@ -93,6 +104,7 @@
       <workItem from="1650977229965" duration="572000" />
       <workItem from="1650977816713" duration="46316000" />
       <workItem from="1651480435221" duration="1143000" />
+      <workItem from="1654054806765" duration="2270000" />
     </task>
     <servers />
   </component>

@@ -8,6 +8,7 @@ import querystring from "query-string";
 import moment from "moment";
 import getGravatar from "../../../../modules/Gravatar";
 import host from "../../../../constants/Host";
+import {hasToken} from "../../../../modules/Authenticate";
 
 
 export default function ArticleList() {
@@ -36,7 +37,7 @@ export default function ArticleList() {
     <List.Item
       key={item.articleId}
       extra={<img className="ArticleThumbnail" alt="Article Thumbnail"
-                  src="https://stock-and-cafe.s3.us-west-1.amazonaws.com/resources/images/cafe_default.jpeg"/>}
+                  src={`https://picsum.photos/id/${item.articleId + 200}/500`}/>}
     >
       <List.Item.Meta
         avatar={<Avatar src={`${getGravatar(item.writerEmail)}`}/>}
@@ -71,7 +72,7 @@ export default function ArticleList() {
 
   return (
     <CafeLayout>
-      <Button key="2" href="/cafe/new">글쓰기</Button>
+      {hasToken() && <Button key="2" href="/cafe/new">글쓰기</Button>}
       <List
         itemLayout="vertical"
         size="large"
