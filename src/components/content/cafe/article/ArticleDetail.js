@@ -63,25 +63,27 @@ export default function ArticleDetail() {
   return (
     <CafeLayout>
       <div data-color-mode="light">
-        <PageHeader
-          title={article.title}
-          className="site-page-header"
-          subTitle={moment(article.createdDate).format("YYYY/MM/DD HH:mm:ss")}
-          tags={<Tag color="blue">카페</Tag>}
-          extra={[
-            <Button key="1" onClick={() => {
-              document.location.href = "/cafe"
-            }}>글목록</Button>,
-            <Button key="2" onClick={() => {
-              document.location.href = `/cafe/${articleId}/edit`
-            }}>수정하기</Button>,
-            <Button key="3" onClick={deleteArticle}>삭제하기</Button>
-          ]}
-          avatar={{src: getGravatar(article.writerEmail)}}
-        >
-          <ReactMarkdown rehypePlugins={[rehypeRaw, remarkGfm, remarkMath]}
-                         children={article.content}/>
-        </PageHeader>
+        {article &&
+          <PageHeader
+            title={article.title}
+            className="site-page-header"
+            subTitle={moment(article.createdDate).format("YYYY/MM/DD HH:mm:ss")}
+            tags={<Tag color="blue">카페</Tag>}
+            extra={[
+              <Button key="1" onClick={() => {
+                document.location.href = "/cafe"
+              }}>글목록</Button>,
+              <Button key="2" onClick={() => {
+                document.location.href = `/cafe/${articleId}/edit`
+              }}>수정하기</Button>,
+              <Button key="3" onClick={deleteArticle}>삭제하기</Button>
+            ]}
+            avatar={{src: getGravatar(article.writerEmail)}}
+          >
+            <ReactMarkdown rehypePlugins={[rehypeRaw, remarkGfm, remarkMath]}
+                           children={article.content}/>
+          </PageHeader>
+        }
       </div>
       <ReplyList/>
     </CafeLayout>

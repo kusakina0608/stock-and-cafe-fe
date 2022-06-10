@@ -13,5 +13,5 @@ function getCurrentUserEmail() {
 }
 
 export default function getGravatar(email = getCurrentUserEmail()) {
-  return `https://www.gravatar.com/avatar/${md5(email)}`
+  return `https://www.gravatar.com/avatar/${email ? md5(email) : ""}`
 }
