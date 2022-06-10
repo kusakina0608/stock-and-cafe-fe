@@ -44,7 +44,7 @@ export default function ArticleList() {
         title={<a href={`/cafe/${item.articleId}`}>{item.title}</a>}
         description={moment(item.createdDate).format("YYYY/MM/DD HH:mm:ss")}
       />
-      {item.content}
+      {item.content.length > 150 ? item.content.substr(0, 150) + "..." : item.content}
     </List.Item>
   )
 
